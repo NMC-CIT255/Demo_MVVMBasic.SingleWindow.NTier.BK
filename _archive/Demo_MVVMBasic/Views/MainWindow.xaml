@@ -1,0 +1,24 @@
+﻿<Window x:Class="Demo_MVVMBasic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Demo_MVVMBasic"
+        Title="MainWindow" Height="150" Width="370">
+    <!--
+    Setting the DataContext instantiates the view model
+    -->
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Button Content="Click for a Popup Window" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="77,45,0,0" 
+                Name="btnClick" 
+                VerticalAlignment="Top" 
+                Width="203"
+                Command="{Binding ButtonCommand}" 
+                CommandParameter="Hai" />
+    </Grid>
+</Window>
